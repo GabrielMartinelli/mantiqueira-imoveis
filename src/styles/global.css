@@ -9,9 +9,10 @@
 }
 
 :root {
-  --background-header: #231f20;
   --white: #ffffff;
   --dark-blue: #1e2e3c;
+  --black: #000000;
+  --green: #0ca970;
 }
 
 a,
@@ -32,11 +33,4 @@ a {
 
 li {
   list-style: none;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
-  line-height: 5rem;
 }
