@@ -98,16 +98,19 @@ const ImgIcon = styled.img`
 export default function Footer() {
   const agent = [
     {
+      id: 1,
       name: "Fausto Braga",
       cellphone: "998234850",
       creci: "45142",
     },
     {
+      id: 2,
       name: "Rafael Rangel",
       cellphone: "991509040",
       creci: "37791",
     },
     {
+      id: 3,
       name: "Tiago Martinelli",
       cellphone: "998985310",
       creci: "51338",
@@ -123,7 +126,7 @@ export default function Footer() {
           <Paragraph>Praça Dr Alcides Mosconi, 46 - Centro</Paragraph>
           <Paragraph>Andradas - MG</Paragraph>
           <Paragraph>37795-000</Paragraph>
-          <Paragraph secundary props="adress">
+          <Paragraph secundary="true" props="adress">
             * Atendimento de segunda a sexta-feira das 08:00 às 17:00h
           </Paragraph>
         </DivFooter>
@@ -136,14 +139,14 @@ export default function Footer() {
         </DivFooter>
         <ListAgent>
           {agent.map((agent) => {
-            return <Items key={name} name={agent.name} cell={agent.cellphone} creci={agent.creci} />;
+            return <Items key={agent.id} name={agent.name} cell={agent.cellphone} creci={agent.creci} />;
           })}
         </ListAgent>
       </SectionFooter>
       <SectionFooter props="social">
         <DivFooter>
-          <Title secundary>Siga-nos :)</Title>
-          <DivFooter social>
+          <Title secundary="true">Siga-nos :)</Title>
+          <DivFooter social="true">
             <a href="https://www.instagram.com/mantiqueiracorretoradeimoveis/" target="_blank">
               <ImgIcon src={insta} alt="Ícone do Instagram" />
             </a>
