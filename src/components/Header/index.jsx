@@ -9,10 +9,9 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark-blue);
-  opacity: ${(props) => (props.action == "true" ? "1" : "0.7")};
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
-  height: 120px;
+  height: ${(props) => (props.action == "true" ? "100px" : "120px")};
   position: fixed;
   z-index: 100;
 
@@ -24,6 +23,9 @@ const Nav = styled.nav`
 
 const ImgLogo = styled.img`
   margin-left: 2rem;
+  transition: all 0.3s ease;
+  width: ${(props) => (props.action == "true" ? "200px" : "260px")};
+  height: ${(props) => (props.action == "true" ? "120px" : "140px")};
 `;
 
 const NavList = styled.ul`
@@ -38,7 +40,7 @@ export default function Header({ action }) {
     <header>
       <Nav action={action.toString()}>
         <NavLink to={"./"}>
-          <ImgLogo src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
+          <ImgLogo action={action.toString()} src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
         </NavLink>
         <NavList>
           <MenuLink name={"Início"} path={"./"} />

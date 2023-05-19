@@ -1,13 +1,56 @@
 import React from "react";
-import background from "@/assets/background-banner.jpg";
 import { styled } from "styled-components";
 
-const Img = styled.img`
-  opacity: 0.7;
+const Div = styled.div`
+  margin: 0;
+  padding-top: var(--padding-top-header);
   width: 100%;
   height: 100%;
+  background: url("../../../src/assets/background-banner.jpg") no-repeat center / cover;
 `;
 
 export default function Banner() {
-  return <Img src={background} />;
+  return (
+    <Div>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+      <h1>TEste</h1>
+    </Div>
+  );
 }

@@ -1,7 +1,37 @@
 import React from "react";
+import { styled } from "styled-components";
 
-export default function Field() {
+const InputStyle = styled.input`
+  height: 2rem;
+  padding: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+
+  &.button {
+    padding: 0;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.button:hover {
+    background-color: var(--dark-green);
+  }
+`;
+
+export default function Field({ type, placeholder, required, valueInput, change, classStyle }) {
   return (
-    <input type="text" placeholder="Digite seu nome" onChange={(e) => setName(e.target.value)} value={name} required />
+    <InputStyle
+      className={classStyle}
+      type={type}
+      placeholder={placeholder}
+      onChange={(evento) => change(evento.target.value)}
+      value={valueInput}
+      required={required}
+    />
   );
 }

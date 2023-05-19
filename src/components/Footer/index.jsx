@@ -6,6 +6,7 @@ import Map from "../Map";
 import Items from "../Items";
 import insta from "./insta.png";
 import face from "./face.png";
+import Title from "../Title";
 
 const FooterStyle = styled.footer`
   border-top: 4px solid var(--green);
@@ -30,13 +31,6 @@ const SectionFooter = styled.section`
 const DivFooter = styled.div`
   text-align: center;
   margin: ${(props) => (props.social ? "2rem 0" : "0")};
-`;
-
-const Title = styled.h3`
-  margin: ${(props) => (props.secundary ? "0" : "1rem 0")};
-  text-align: center;
-  font-size: 20px;
-  color: var(--white);
 `;
 
 const Paragraph = styled.p`
@@ -116,7 +110,7 @@ export default function Footer() {
       </SectionFooter>
       <SectionFooter className="social">
         <DivFooter>
-          <Title secundary="true">Siga-nos :)</Title>
+          <Title actionTitle="footer">Siga-nos :)</Title>
           <DivFooter social="true">
             <a href="https://www.instagram.com/mantiqueiracorretoradeimoveis/" target="_blank">
               <ImgIcon src={insta} alt="Ícone do Instagram" />
