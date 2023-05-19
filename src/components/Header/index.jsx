@@ -9,8 +9,10 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark-blue);
-  // opacity: 0.9;
+  opacity: ${(props) => (props.action == "true" ? "1" : "0.7")};
+  transition: opacity 0.3s ease;
   width: 100%;
+  height: 120px;
   position: fixed;
   z-index: 100;
 
@@ -31,10 +33,10 @@ const NavList = styled.ul`
   margin-right: 2rem;
 `;
 
-export default function Header() {
+export default function Header({ action }) {
   return (
     <header>
-      <Nav>
+      <Nav action={action.toString()}>
         <NavLink to={"./"}>
           <ImgLogo src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
         </NavLink>

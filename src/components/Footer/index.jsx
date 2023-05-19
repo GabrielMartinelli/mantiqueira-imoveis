@@ -16,39 +16,15 @@ const SectionFooter = styled.section`
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--green);
+  padding: 4rem;
 
-  justify-content: ${(value) => {
-    const listValue = {
-      agents: "space-around",
-      social: "center",
-    };
-
-    const aux = value.props;
-
-    return listValue[aux] || "space-around";
-  }};
-
-  padding: ${(value) => {
-    const listValue = {
-      agents: "4rem 4rem 4rem 4rem",
-      social: "2rem 4rem 0rem 4rem",
-    };
-
-    const aux = value.props;
-
-    return listValue[aux] || "4rem";
-  }};
-
-  border-bottom: ${(value) => {
-    const listValue = {
-      agents: "1px solid var(--green);",
-      social: "0",
-    };
-
-    const aux = value.props;
-
-    return listValue[aux] || "1px solid var(--green);";
-  }};
+  &.social {
+    justify-content: center;
+    border-bottom: 0;
+    padding: 2rem 4rem 0rem 4rem;
+  }
 `;
 
 const DivFooter = styled.div`
@@ -66,16 +42,11 @@ const Title = styled.h3`
 const Paragraph = styled.p`
   color: ${(props) => (props.secundary ? "var(--green)" : "var(--white)")};
   margin: 0.5rem 0;
-  font-size: ${(value) => {
-    const listValue = {
-      adress: "14px",
-      social: "14px",
-    };
+  font-size: 18px;
 
-    const aux = value.props;
-
-    return listValue[aux] || "18px";
-  }};
+  &.small {
+    font-size: 14px;
+  }
 `;
 
 const ListAgent = styled.ul`
@@ -126,13 +97,13 @@ export default function Footer() {
           <Paragraph>Praça Dr Alcides Mosconi, 46 - Centro</Paragraph>
           <Paragraph>Andradas - MG</Paragraph>
           <Paragraph>37795-000</Paragraph>
-          <Paragraph secundary="true" props="adress">
+          <Paragraph secundary="true" className="small">
             * Atendimento de segunda a sexta-feira das 08:00 às 17:00h
           </Paragraph>
         </DivFooter>
         <Map />
       </SectionFooter>
-      <SectionFooter props="agents">
+      <SectionFooter>
         <DivFooter>
           <img src={agentIcon} alt="Ícone de uma pessoa segurando uma casa" />
           <Title>Corretores</Title>
@@ -143,7 +114,7 @@ export default function Footer() {
           })}
         </ListAgent>
       </SectionFooter>
-      <SectionFooter props="social">
+      <SectionFooter className="social">
         <DivFooter>
           <Title secundary="true">Siga-nos :)</Title>
           <DivFooter social="true">
@@ -154,7 +125,7 @@ export default function Footer() {
               <ImgIcon src={face} alt="Ícone do Facebook" />
             </a>
           </DivFooter>
-          <Paragraph props="social">
+          <Paragraph className="small">
             <a href="https://gabrielmartinellidev.vercel.app/" target="_blank">
               Desenvolvido por Gabriel Martinelli
             </a>
