@@ -7,6 +7,10 @@ const Div = styled.div`
   width: 100%;
   height: 100%;
   background: url("../../../src/assets/background-banner.jpg") no-repeat center / cover;
+
+  h1 {
+    color: transparent;
+  }
 `;
 
 export default function Banner() {

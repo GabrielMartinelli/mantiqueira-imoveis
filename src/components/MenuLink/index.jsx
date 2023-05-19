@@ -30,9 +30,17 @@ const List = styled.li`
 `;
 
 export default function MenuLink({ name, path }) {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <NavLink to={path}>
-      <List>{name}</List>
-    </NavLink>
+    <div>
+      <NavLink to={path} onClick={scrollToTop}>
+        <List>{name}</List>
+      </NavLink>
+    </div>
   );
 }
