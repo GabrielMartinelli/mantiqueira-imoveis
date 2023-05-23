@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
+import { scrollToTop } from "../Header";
 
 const List = styled.li`
   margin: 0 0.5rem;
@@ -30,17 +31,9 @@ const List = styled.li`
 `;
 
 export default function MenuLink({ name, path }) {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   return (
-    <div>
-      <NavLink to={path} onClick={scrollToTop}>
-        <List>{name}</List>
-      </NavLink>
-    </div>
+    <NavLink to={path} onClick={scrollToTop}>
+      <List>{name}</List>
+    </NavLink>
   );
 }

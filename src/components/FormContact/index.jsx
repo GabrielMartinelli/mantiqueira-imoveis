@@ -3,6 +3,7 @@ import Field from "../Field";
 import InputMask from "@mona-health/react-input-mask";
 import { styled } from "styled-components";
 import Title from "../Title";
+import emailjs from "@emailjs/browser";
 
 const SectionContact = styled.section`
   padding-top: var(--padding-top-header);
@@ -51,11 +52,26 @@ export default function FormContact() {
 
   const sendEmail = (event) => {
     event.preventDefault();
-    console.log(name, phone, email, message);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+
+    const templateParams = {
+      from_name: name,
+      phone: phone,
+      email: email,
+      message: message,
+    };
+
+    emailjs.send("service_arohi6b", "template_v0awxxm", templateParams, "zoS7y8C4WD7yXQwX_").then(
+      () => {
+        alert("Enviado com sucesso");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      },
+      (err) => {
+        console.log("ERRO:", err);
+      }
+    );
   };
 
   return (
@@ -90,6 +106,7 @@ export default function FormContact() {
             />
             <textarea
               className="message"
+              required
               placeholder="Digite usa mensagem aqui"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
