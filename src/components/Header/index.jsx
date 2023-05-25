@@ -4,13 +4,6 @@ import { styled } from "styled-components";
 import { NavLink } from "react-router-dom";
 import Burguer from "./Burguer";
 
-export const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
 const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -44,7 +37,12 @@ export default function Header({ action }) {
   return (
     <header>
       <Nav action={action.toString()}>
-        <NavLink to={"./"} onClick={scrollToTop}>
+        <NavLink
+          to={"./"}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <ImgLogo action={action.toString()} src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
         </NavLink>
         <Burguer />

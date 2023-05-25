@@ -1,6 +1,6 @@
 import { MenuOpenContext } from "@/common/context/MenuOpen";
 import MenuLink from "@/components/MenuLink";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { styled } from "styled-components";
 
 const NavList = styled.ul`

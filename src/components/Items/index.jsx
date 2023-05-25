@@ -23,7 +23,7 @@ const LinkContact = styled.a`
   &:hover {
     background-color: var(--green);
     border-bottom: 3px solid var(--white);
-    box-shadow: 2px 1px 1px black;
+    box-shadow: 3px 2px 2px black;
     border-radius: 0 0 15px 0;
     color: var(--dark-blue);
   }
