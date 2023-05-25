@@ -4,8 +4,11 @@ import { styled } from "styled-components";
 
 const ImgIcon = styled.img`
   width: 24px;
-  margin-left: 1rem;
   cursor: pointer;
+
+  @media (max-width: 630px) {
+    width: 28px;
+  }
 `;
 
 const LinkContact = styled.a`
@@ -29,7 +32,7 @@ const LinkContact = styled.a`
     opacity: 0.8;
     margin-bottom: 2rem;
     background-color: var(--green);
-    border-bottom: 3px solid var(--white);
+    border-bottom: 4px solid var(--white);
     box-shadow: 2px 1px 1px black;
     border-radius: 0 0 15px 0;
     color: var(--dark-blue);
@@ -45,7 +48,7 @@ const TextSpan = styled.span`
   color: var(--white);
 
   @media (max-width: 630px) {
-    &.nameAgent {
+    &.styleBlue {
       color: var(--dark-blue);
       font-weight: 600;
     }
@@ -59,9 +62,9 @@ export default function Items({ name, cell, creci }) {
         href={`https://api.whatsapp.com/send?phone=5535${cell}&text=Olá ${name}, estou a procura de um imóvel, poderia me ajudar?`}
         target="_blank"
       >
-        <TextSpan className="nameAgent">{name}</TextSpan>
+        <TextSpan className="styleBlue">{name}</TextSpan>
         <TextSpan>CRECI {creci}</TextSpan>
-        <TextSpan>(35) {cell}</TextSpan>
+        <TextSpan className="styleBlue">(35) {cell}</TextSpan>
         <ImgIcon src={whatsapp} alt="Logo do whatsapp" />
       </LinkContact>
     </li>
