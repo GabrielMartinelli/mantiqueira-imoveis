@@ -1,3 +1,4 @@
+import { MenuOpenProvider } from "@/common/context/MenuOpen";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";

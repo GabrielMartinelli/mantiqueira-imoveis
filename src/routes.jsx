@@ -5,18 +5,21 @@ import Initial from "./pages/Initial";
 import Properties from "./pages/Properties";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import { MenuOpenProvider } from "./common/context/MenuOpen";
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<BasePage />}>
-          <Route index element={<Initial />}></Route>
-          <Route path="/imoveis" element={<Properties />}></Route>
-          <Route path="/quem-somos" element={<About />}></Route>
-          <Route path="/contato" element={<Contact />}></Route>
-        </Route>
-      </Routes>
+      <MenuOpenProvider>
+        <Routes>
+          <Route path="/" element={<BasePage />}>
+            <Route index element={<Initial />}></Route>
+            <Route path="/imoveis" element={<Properties />}></Route>
+            <Route path="/quem-somos" element={<About />}></Route>
+            <Route path="/contato" element={<Contact />}></Route>
+          </Route>
+        </Routes>
+      </MenuOpenProvider>
     </BrowserRouter>
   );
 }

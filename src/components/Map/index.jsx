@@ -6,6 +6,11 @@ const DivMap = styled.div`
   padding-bottom: 30.25%;
   position: relative;
   width: 50%;
+
+  @media (max-width: 920px) {
+    width: 100%;
+    height: 220px;
+  }
 `;
 
 const MapIframe = styled.iframe`

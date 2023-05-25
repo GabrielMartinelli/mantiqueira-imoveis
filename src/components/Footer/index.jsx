@@ -26,6 +26,10 @@ const SectionFooter = styled.section`
     border-bottom: 0;
     padding: 2rem 4rem 0rem 4rem;
   }
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
 `;
 
 const DivFooter = styled.div`
@@ -40,12 +44,17 @@ const Paragraph = styled.p`
 
   &.small {
     font-size: 14px;
+    margin-bottom: 2rem;
   }
 `;
 
 const ListAgent = styled.ul`
   display: flex;
   align-items: center;
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
 `;
 
 const ImgIcon = styled.img`

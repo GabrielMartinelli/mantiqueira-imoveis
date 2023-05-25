@@ -20,6 +20,15 @@ const DivContainer = styled.div`
     border: 1px solid var(--dark-blue);
     box-shadow: 10px -8px var(--green);
     width: 700px;
+
+    @media (max-width: 780px) {
+      margin: 0 5rem 5rem 5rem;
+    }
+
+    @media (max-width: 620px) {
+      margin: 0 3rem 5rem 3rem;
+      padding-bottom: 2rem;
+    }
   }
 `;
 

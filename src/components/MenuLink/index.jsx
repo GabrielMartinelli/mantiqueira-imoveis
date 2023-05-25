@@ -10,6 +10,10 @@ const List = styled.li`
   padding: 8px;
   transition: all 0.3s ease;
 
+  @media (max-width: 800px) {
+    padding-bottom: 20px;
+  }
+
   &:hover {
     letter-spacing: 2px;
   }
@@ -30,7 +34,7 @@ const List = styled.li`
   }
 `;
 
-export default function MenuLink({ name, path }) {
+export default function MenuLink({ name, path, open }) {
   return (
     <NavLink to={path} onClick={scrollToTop}>
       <List>{name}</List>

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "./logo.png";
 import { styled } from "styled-components";
 import { NavLink } from "react-router-dom";
-import MenuLink from "../MenuLink";
+import Burguer from "./Burguer";
 
 export const scrollToTop = () => {
   window.scrollTo({
@@ -33,13 +33,11 @@ const ImgLogo = styled.img`
   transition: all 0.3s ease;
   width: ${(props) => (props.action == "true" ? "200px" : "260px")};
   height: ${(props) => (props.action == "true" ? "120px" : "140px")};
-`;
 
-const NavList = styled.ul`
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  margin-right: 2rem;
+  @media (max-width: 800px) {
+    width: 200px;
+    height: 120px;
+  }
 `;
 
 export default function Header({ action }) {
@@ -49,12 +47,7 @@ export default function Header({ action }) {
         <NavLink to={"./"} onClick={scrollToTop}>
           <ImgLogo action={action.toString()} src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
         </NavLink>
-        <NavList>
-          <MenuLink name={"Início"} path={"./"} />
-          <MenuLink name={"Imóveis"} path={"/imoveis"} />
-          <MenuLink name={"Quem somos"} path={"/quem-somos"} />
-          <MenuLink name={"Contato"} path={"/contato"} />
-        </NavList>
+        <Burguer />
       </Nav>
     </header>
   );
