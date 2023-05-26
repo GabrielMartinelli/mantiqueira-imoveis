@@ -17,6 +17,14 @@ const TitleStyle = styled.h3`
     margin-bottom: 3rem;
     font-weight: 700;
   }
+
+  &.about {
+    text-align: left;
+    font-size: 32px;
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
 `;
 
 export default function Title({ children, actionTitle }) {
