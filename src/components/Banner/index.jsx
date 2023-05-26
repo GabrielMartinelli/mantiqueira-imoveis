@@ -6,7 +6,7 @@ const Div = styled.div`
   padding-top: var(--padding-top-header);
   width: 100%;
   height: 100%;
-  background: url("../../../src/assets/img/background-banner.jpg") no-repeat center / cover;
+  background: url("../src/components/Banner/background-banner.jpg") no-repeat center / cover;
 
   h1 {
     color: transparent;
