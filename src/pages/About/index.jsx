@@ -3,6 +3,7 @@ import React from "react";
 import { styled } from "styled-components";
 import fachada from "@/pages/About/fachada.jpg";
 import AboutValues from "@/components/AboutValues";
+import AboutProfiles from "@/components/AboutProfiles";
 
 const SectionAbout = styled.section`
   padding-top: var(--padding-top-header);
@@ -91,6 +92,7 @@ export default function About() {
         </DivAbout>
       </SectionAbout>
       <AboutValues />
+      <AboutProfiles />
     </>
   );
 }
