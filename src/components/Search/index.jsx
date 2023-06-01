@@ -35,6 +35,7 @@ const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export default function Search() {
