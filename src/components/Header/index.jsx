@@ -8,7 +8,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--dark-blue);
+  background-color: ${(props) => (props.action == "true" ? "rgba(30, 46, 60, 1)" : "rgba(30, 46, 60, 0.8)")};
   transition: all 0.3s ease;
   width: 100%;
   height: ${(props) => (props.action == "true" ? "100px" : "120px")};
