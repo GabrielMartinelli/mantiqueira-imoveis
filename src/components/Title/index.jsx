@@ -25,6 +25,23 @@ const TitleStyle = styled.h3`
     margin-bottom: 2rem;
     font-weight: 700;
   }
+
+  &.search {
+    text-shadow: 0 0 15px var(--black);
+    text-transform: uppercase;
+    font-size: 48px;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &.search-sub {
+    text-shadow: 0 0 15px var(--black);
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
 `;
 
 export default function Title({ children, actionTitle }) {
