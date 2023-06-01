@@ -8,6 +8,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 :root {
   --white: #ffffff;
   --dark-blue: #1e2e3c;

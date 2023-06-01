@@ -6,10 +6,12 @@ import Properties from "./pages/Properties";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { MenuOpenProvider } from "./common/context/MenuOpen";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <MenuOpenProvider>
         <Routes>
           <Route path="/" element={<BasePage />}>

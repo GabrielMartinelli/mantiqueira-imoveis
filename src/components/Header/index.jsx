@@ -37,12 +37,7 @@ export default function Header({ action }) {
   return (
     <header>
       <Nav action={action.toString()}>
-        <NavLink
-          to={"./"}
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
+        <NavLink to={"./"}>
           <ImgLogo action={action.toString()} src={logo} alt="Logo da empresa Mantiqueira corretores de Imóveis" />
         </NavLink>
         <Burguer />

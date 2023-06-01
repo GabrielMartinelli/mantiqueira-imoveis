@@ -35,12 +35,7 @@ const List = styled.li`
 
 export default function MenuLink({ name, path, open }) {
   return (
-    <NavLink
-      to={path}
-      onClick={() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
-    >
+    <NavLink to={path}>
       <List>{name}</List>
     </NavLink>
   );
