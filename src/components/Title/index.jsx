@@ -33,6 +33,10 @@ const TitleStyle = styled.h3`
     color: var(--white);
     margin-bottom: 1rem;
     font-weight: 700;
+
+    @media (max-width: 470px) {
+      font-size: 36px;
+    }
   }
 
   &.search-sub {
@@ -41,6 +45,10 @@ const TitleStyle = styled.h3`
     color: var(--white);
     margin-bottom: 2rem;
     font-weight: 500;
+
+    @media (max-width: 470px) {
+      font-size: 24px;
+    }
   }
 `;
 

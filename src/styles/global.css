@@ -22,6 +22,11 @@ body {
   --padding-top-header: 180px;
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--white);
+}
+
 a,
 button,
 input,
