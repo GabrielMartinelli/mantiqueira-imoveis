@@ -1,6 +1,6 @@
 import BasePage from "@/pages/BasePage";
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Initial from "./pages/Initial";
 import Properties from "./pages/Properties";
 import About from "./pages/About";
@@ -20,8 +20,7 @@ export default function AppRoutes() {
             <Route path="/imoveis" element={<Properties />} />
             <Route path="/quem-somos" element={<About />} />
             <Route path="/contato" element={<Contact />} />
-            <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/404" />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </MenuOpenProvider>
