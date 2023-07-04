@@ -52,6 +52,7 @@ const TitleStyle = styled.h1`
   }
 
   &.notFound {
+    color: var(--black);
     font-size: 24px;
     font-weight: 700;
   }
