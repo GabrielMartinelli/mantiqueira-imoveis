@@ -5,6 +5,7 @@ const TitleStyle = styled.h1`
   margin: 1rem 0;
   text-align: center;
   font-size: 20px;
+  color: var(--white);
 
   &.footer {
     margin: 0;
