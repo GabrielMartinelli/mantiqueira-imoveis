@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { MenuOpenProvider } from "./common/context/MenuOpen";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./pages/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
             <Route path="/imoveis" element={<Properties />}></Route>
             <Route path="/quem-somos" element={<About />}></Route>
             <Route path="/contato" element={<Contact />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
           </Route>
         </Routes>
       </MenuOpenProvider>

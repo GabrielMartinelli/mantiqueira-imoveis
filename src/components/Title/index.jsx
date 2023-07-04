@@ -1,11 +1,10 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const TitleStyle = styled.h3`
+const TitleStyle = styled.h1`
   margin: 1rem 0;
   text-align: center;
   font-size: 20px;
-  color: var(--white);
 
   &.footer {
     margin: 0;
@@ -49,6 +48,11 @@ const TitleStyle = styled.h3`
     @media (max-width: 470px) {
       font-size: 24px;
     }
+  }
+
+  &.notFound {
+    font-size: 24px;
+    font-weight: 700;
   }
 `;
 

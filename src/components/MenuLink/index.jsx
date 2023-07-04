@@ -33,7 +33,7 @@ const List = styled.li`
   }
 `;
 
-export default function MenuLink({ name, path, open }) {
+export default function MenuLink({ name, path }) {
   return (
     <NavLink to={path}>
       <List>{name}</List>
