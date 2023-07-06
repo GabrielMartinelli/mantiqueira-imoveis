@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
-import location from "./location.png";
-import agentIcon from "./agent.png";
+import { MdRealEstateAgent } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import Map from "../Map";
 import Items from "../Items";
-import insta from "./insta.png";
-import face from "./face.png";
 import Title from "../Title";
 
 const FooterStyle = styled.footer`
@@ -35,6 +35,16 @@ const SectionFooter = styled.section`
 const DivFooter = styled.div`
   text-align: center;
   margin: ${(props) => (props.social ? "2rem 0" : "0")};
+
+  a {
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    svg:hover {
+      background-color: var(--white);
+      border-radius: 10px;
+    }
+  }
 `;
 
 const Paragraph = styled.p`
@@ -54,18 +64,6 @@ const ListAgent = styled.ul`
 
   @media (max-width: 630px) {
     flex-direction: column;
-  }
-`;
-
-const ImgIcon = styled.img`
-  margin: 0 1rem;
-  width: 52px;
-  height: 52px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--white);
-    border-radius: 50%;
   }
 `;
 
@@ -95,7 +93,7 @@ export default function Footer() {
     <FooterStyle>
       <SectionFooter>
         <DivFooter>
-          <img src={location} alt="Ícone de localização" />
+          <MdLocationOn size={64} color="#0ca970" />
           <Title>Endereço</Title>
           <Paragraph>Praça Dr Alcides Mosconi, 46 - Centro</Paragraph>
           <Paragraph>Andradas - MG</Paragraph>
@@ -108,7 +106,7 @@ export default function Footer() {
       </SectionFooter>
       <SectionFooter>
         <DivFooter>
-          <img src={agentIcon} alt="Ícone de uma pessoa segurando uma casa" />
+          <MdRealEstateAgent size={64} color="#0ca970" />
           <Title>Corretores</Title>
         </DivFooter>
         <ListAgent>
@@ -121,11 +119,11 @@ export default function Footer() {
         <DivFooter>
           <Title actionTitle="footer">Siga-nos :)</Title>
           <DivFooter social="true">
-            <a href="https://www.instagram.com/mantiqueiracorretoradeimoveis/" target="_blank">
-              <ImgIcon src={insta} alt="Ícone do Instagram" />
-            </a>
             <a href="https://www.facebook.com/profile.php?id=100082962807867&mibextid=ZbWKwL" target="_blank">
-              <ImgIcon src={face} alt="Ícone do Facebook" />
+              <FaFacebookSquare size={52} color="#0ca970" />
+            </a>
+            <a href="https://www.instagram.com/mantiqueiracorretoradeimoveis/" target="_blank">
+              <FaInstagramSquare size={52} color="#0ca970" />
             </a>
           </DivFooter>
           <Paragraph className="small">

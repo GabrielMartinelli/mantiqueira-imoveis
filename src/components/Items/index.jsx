@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 
 const ImgIcon = styled.img`
   width: 24px;
-  cursor: pointer;
 
   @media (max-width: 630px) {
     width: 28px;
