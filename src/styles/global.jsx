@@ -1,5 +1,6 @@
-@import-normalize;
+import { createGlobalStyle } from "styled-components";
 
+export default createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -22,21 +23,17 @@ body {
   --padding-top-header: 180px;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  color: var(--white);
-}
-
 a,
 button,
 input,
 textarea {
-  font: inherit;
+  font-style: inherit;
   color: inherit;
 }
 
 button {
   background-color: transparent;
+  cursor: pointer;
 }
 
 a {
@@ -46,3 +43,10 @@ a {
 li {
   list-style: none;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--white);
+}
+
+`;
