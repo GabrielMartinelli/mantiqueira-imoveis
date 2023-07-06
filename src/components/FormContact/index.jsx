@@ -4,6 +4,7 @@ import InputMask from "@mona-health/react-input-mask";
 import { styled } from "styled-components";
 import Title from "../Title";
 import emailjs from "@emailjs/browser";
+import Button from "../Button";
 
 const SectionContact = styled.section`
   padding-top: var(--padding-top-header);
@@ -120,7 +121,7 @@ export default function FormContact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <Field classStyle="button" type="submit" valueInput="Enviar" />
+            <Button classStyle="button-contact"> Enviar </Button>
           </Form>
         </div>
       </DivContainer>

@@ -20,7 +20,7 @@ export default function Banner() {
       <SwiperSlide>
         <Img
           src={banner1}
-          alt="Banner com a descrição Financia seu Imóvel e os telefones do fale conosco: 35-9-9150-9040, 35-9-9823-4850, 35-9-9898-5310, fundo verde do lado esquerdo uma faixa preta, desenho de uma mão segurando uma casa do lado direito"
+          alt="Descrição Financia seu Imóvel e os telefones do fale conosco: 35-9-9150-9040, 35-9-9823-4850, 35-9-9898-5310, fundo verde do lado esquerdo uma faixa preta, desenho de uma mão segurando uma casa do lado direito"
         />
       </SwiperSlide>
       <SwiperSlide>

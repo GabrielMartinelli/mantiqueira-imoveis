@@ -28,6 +28,11 @@ const DivValues = styled.div`
     border-radius: 0.25rem;
     padding: 3rem;
 
+    p {
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
     @media (max-width: 480px) {
       box-shadow: 8px 8px var(--green);
       padding: 2rem;
@@ -38,11 +43,6 @@ const DivValues = styled.div`
       height: 100%;
       margin-bottom: 3rem;
       box-shadow: 12px 12px var(--green);
-    }
-
-    p {
-      color: var(--white);
-      margin-bottom: 0.3rem;
     }
   }
 `;

@@ -48,7 +48,7 @@ const TextSpan = styled.span`
   color: var(--white);
 
   @media (max-width: 630px) {
-    &.styleBlue {
+    &.styleBlueDark {
       color: var(--dark-blue);
       font-weight: 600;
     }
@@ -64,7 +64,7 @@ export default function Items({ name, cell, creci }) {
       >
         <TextSpan className="styleBlue">{name}</TextSpan>
         <TextSpan>CRECI {creci}</TextSpan>
-        <TextSpan className="styleBlue">(35) {cell}</TextSpan>
+        <TextSpan className="styleBlueDark">(35) {cell}</TextSpan>
         <ImgIcon src={whatsapp} alt="Logo do whatsapp" />
       </LinkContact>
     </li>

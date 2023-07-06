@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import banner from "/img/background-banner.jpg";
 import Title from "../Title";
 import DropdownList from "../DropdownList";
-import Field from "../Field";
+import Button from "../Button";
 
 const Section = styled.section`
   padding-top: var(--padding-top-header);
@@ -51,7 +51,7 @@ export default function Search() {
         <Form>
           <DropdownList typeDescription={finality} description="Qual a finalidade?" />
           <DropdownList typeDescription={type} description="Tipo de Imóvel?" />
-          <Field classStyle="button-search" type="submit" valueInput="Buscar" />
+          <Button classStyle="button-search"> Buscar </Button>
         </Form>
       </div>
     </Section>

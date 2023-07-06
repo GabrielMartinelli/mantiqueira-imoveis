@@ -21,24 +21,25 @@ body {
   --green: #0ca970;
   --dark-green: #06724a;
   --padding-top-header: 180px;
+  --color-button: rgb(12, 169, 112, 0.8);
 }
 
 a,
-button,
 input,
 textarea {
   font-style: inherit;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
   background-color: transparent;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
 }
 
-a {
-  text-decoration: none;
-}
 
 li {
   list-style: none;
