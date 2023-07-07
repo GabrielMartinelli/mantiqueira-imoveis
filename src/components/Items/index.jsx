@@ -1,14 +1,6 @@
 import React from "react";
-import whatsapp from "./whatsapp.png";
+import { FaWhatsappSquare } from "react-icons/fa";
 import { styled } from "styled-components";
-
-const ImgIcon = styled.img`
-  width: 24px;
-
-  @media (max-width: 630px) {
-    width: 28px;
-  }
-`;
 
 const LinkContact = styled.a`
   display: flex;
@@ -25,6 +17,12 @@ const LinkContact = styled.a`
     box-shadow: 3px 2px 2px black;
     border-radius: 0 0 15px 0;
     color: var(--dark-blue);
+
+    svg {
+      width: 22px;
+      background-color: var(--white);
+      border-radius: 5px;
+    }
   }
 
   @media (max-width: 630px) {
@@ -35,6 +33,12 @@ const LinkContact = styled.a`
     box-shadow: 2px 1px 1px black;
     border-radius: 0 0 15px 0;
     color: var(--dark-blue);
+
+    svg {
+      width: 22px;
+      background-color: var(--white);
+      border-radius: 5px;
+    }
   }
 `;
 
@@ -64,7 +68,7 @@ export default function Items({ name, cell, creci }) {
         <TextSpan className="styleBlue">{name}</TextSpan>
         <TextSpan>CRECI {creci}</TextSpan>
         <TextSpan className="styleBlueDark">(35) {cell}</TextSpan>
-        <ImgIcon src={whatsapp} alt="Logo do whatsapp" />
+        <FaWhatsappSquare size={64} color="#0ca970" />
       </LinkContact>
     </li>
   );
