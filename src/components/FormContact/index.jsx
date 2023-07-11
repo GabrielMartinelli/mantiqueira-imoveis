@@ -121,7 +121,10 @@ export default function FormContact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <Button classStyle="button-contact"> Enviar </Button>
+            <Button type="submit" classStyle="button-contact">
+              {" "}
+              Enviar{" "}
+            </Button>
           </Form>
         </div>
       </DivContainer>

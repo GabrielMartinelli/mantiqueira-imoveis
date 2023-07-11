@@ -23,6 +23,11 @@ const ButtonStyle = styled.button`
   }
 `;
 
-export default function Button({ classStyle, children }) {
-  return <ButtonStyle className={classStyle}> {children}</ButtonStyle>;
+export default function Button({ classStyle, children, type }) {
+  return (
+    <ButtonStyle type={type} className={classStyle}>
+      {" "}
+      {children}
+    </ButtonStyle>
+  );
 }

@@ -51,7 +51,10 @@ export default function Search() {
         <Form>
           <DropdownList typeDescription={finality} description="Qual a finalidade?" />
           <DropdownList typeDescription={type} description="Tipo de Imóvel?" />
-          <Button classStyle="button-search"> Buscar </Button>
+          <Button type="button" classStyle="button-search">
+            {" "}
+            Buscar{" "}
+          </Button>
         </Form>
       </div>
     </Section>
